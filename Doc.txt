@@ -1,0 +1,15 @@
+to run code in deno
+"deno run app.ts"
+
+if we are doing some task like writing to file then we must have to give permission explicitly oterwise Deno code is not allowed to do so.(reading/writing to file, making or listening to service calls are some of these tasks for which Deno requires permission)
+
+"deno run --allow-write app.ts" - specifying write permission to file
+"deno run --allow-write=message.txt,message1.txt app.ts" - can specify file names also with permission
+
+Deno built-in utilities commonly known as "Deno Namespace APIs".
+
+Node does support latest import syntax but it does not support import from a remote URL but Deno supports that. This means deno allows us to not download the library to work and just refer to remote library package to do achieve the requirement.
+
+import { listenAndServe } from "https://deno.land/std@0.114.0/http/server.ts";
+
+"oak" in Deno is similar to "express" in NodeJs. but "oak" is not inspired by "express" though ot is some what similar to or inspired by "koa" in Node.js which is inspired by "express" and do what express do in some other way.
